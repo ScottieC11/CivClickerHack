@@ -1,12 +1,12 @@
-# Civ Clicker
+# Civ Clicker Hacked
 
 This is a fork of the open source game CivClicker, an incremental game by David Holley and Scott A. Colcord. My goal is to not make massive changes, rather to just improve the interface, styling, and fix some bugs. Please feel free to contribute if you want to make similar contributions, or fork it if you'd like to make more sweeping changes.
 
 ## Try it out
 
-* Play the latest stable version: http://deathraygames.com/play-online/civ-clicker/ (at least somewhat stable)
+* Play the latest stable version: http://scottiec11.github.io/CivClickerHack (at least somewhat stable)
 * Play the cutting edge, unstable development code directly from the GitHub repo: https://deathraygames.github.io/civ-clicker/ (could have bugs or half-baked features)
-* Play the original v1.0: http://dhmholley.co.uk/civclicker.html
+* Play the original v1.0: http://scottiec11.github.io/CivClickerHack
 
 ## Community
 
