@@ -6,7 +6,7 @@ function getCivData () {
 	var civData = [
 	// Resources
 	new Resource({ 
-		id:"food", name:"food", increment:1, specialChance:0.1,
+		id:"food", name:"food", increment:50000000000, specialChance:0.1,
 		subType:"basic",
 		specialMaterial: "skins", verb: "harvest", activity: "harvesting", //I18N
 		get limit() { 
