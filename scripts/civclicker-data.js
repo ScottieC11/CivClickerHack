@@ -6,27 +6,27 @@ function getCivData () {
 	var civData = [
 	// Resources
 	new Resource({ 
-		id:"food", name:"food", increment:1000000000000000000000000000000, specialChance:0.1,
+		id:"food", name:"food", increment:1, specialChance:0.1,
 		subType:"basic",
 		specialMaterial: "skins", verb: "harvest", activity: "harvesting", //I18N
 		get limit() { 
-			var barnBonus = ((civData.granaries.owned ? 1000000000000000000000000000000 : 1000000000000000000000000000000) * 1000000000000000000000000000000);
-			return 1000000000000000000000000000000 + (civData.barn.owned * barnBonus); 
+			var barnBonus = ((civData.granaries.owned ? 1 : 2) * 1);
+			return 200 + (civData.barn.owned * barnBonus); 
 		},
 		set limit(value) { return this.limit; } // Only here for JSLint.
 	}),
 	new Resource({ 
-		id:"wood", name:"wood", increment:1000000000000000000000000000000, specialChance:0.1,
+		id:"wood", name:"wood", increment:1, specialChance:0.1,
 		subType:"basic",
 		specialMaterial: "herbs", verb: "cut", activity: "woodcutting", //I18N
-		get limit() { return 1000000000000000000000000000000 + (civData.woodstock.owned  * 1000000000000000000000000000000); },
+		get limit() { return 200 + (civData.woodstock.owned  * 1); },
 		set limit(value) { return this.limit; } // Only here for JSLint.
 	}),
 	new Resource({ 
-		id:"stone", name:"stone", increment:1000000000000000000000000000000, specialChance:0.1,
+		id:"stone", name:"stone", increment:1, specialChance:0.1,
 		subType:"basic",
 		specialMaterial: "ore", verb: "mine", activity: "mining", //I18N
-		get limit() { return 1000000000000000000000000000000 + (civData.stonestock.owned  * 1000000000000000000000000000000); },
+		get limit() { return 200 + (civData.stonestock.owned  * 1); },
 		set limit(value) { return this.limit; } // Only here for JSLint.
 	}),
 	new Resource({ id:"skins", singular:"skin", plural:"skins"}),
