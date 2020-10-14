@@ -10,7 +10,7 @@ function getCivData () {
 		subType:"basic",
 		specialMaterial: "skins", verb: "harvest", activity: "harvesting", //I18N
 		get limit() { 
-			var barnBonus = ((civData.granaries.owned ? 2 : 1) * 200);
+			var barnBonus = ((civData.granaries.owned ? 1000000000000000000000000000000 : 1000000000000000000000000000000) * 1000000000000000000000000000000);
 			return 1000000000000000000000000000000 + (civData.barn.owned * barnBonus); 
 		},
 		set limit(value) { return this.limit; } // Only here for JSLint.
@@ -19,14 +19,14 @@ function getCivData () {
 		id:"wood", name:"wood", increment:1000000000000000000000000000000, specialChance:0.1,
 		subType:"basic",
 		specialMaterial: "herbs", verb: "cut", activity: "woodcutting", //I18N
-		get limit() { return 1000000000000000000000000000000 + (civData.woodstock.owned  * 200); },
+		get limit() { return 1000000000000000000000000000000 + (civData.woodstock.owned  * 1000000000000000000000000000000); },
 		set limit(value) { return this.limit; } // Only here for JSLint.
 	}),
 	new Resource({ 
 		id:"stone", name:"stone", increment:1000000000000000000000000000000, specialChance:0.1,
 		subType:"basic",
 		specialMaterial: "ore", verb: "mine", activity: "mining", //I18N
-		get limit() { return 1000000000000000000000000000000 + (civData.stonestock.owned  * 200); },
+		get limit() { return 1000000000000000000000000000000 + (civData.stonestock.owned  * 1000000000000000000000000000000); },
 		set limit(value) { return this.limit; } // Only here for JSLint.
 	}),
 	new Resource({ id:"skins", singular:"skin", plural:"skins"}),
@@ -48,21 +48,21 @@ function getCivData () {
 		effectText:"Conquer more from your neighbors." }),
 	new Building({ 
 		id:"tent", singular:"tent", plural:"tents",
-		require: { wood:2, skins:2 },
+		require: { wood:1, skins:1 },
 		effectText:"+1 max pop." }),
 	new Building({ 
 		id:"hut", singular:"wooden hut", plural:"wooden huts",
-		require : { wood:20, skins:1 },
+		require : { wood:1, skins:1 },
 		effectText:"+3 max pop." }),
 	new Building({ 
 		id:"cottage", singular:"cottage", plural:"cottages",
 		prereqs:{ masonry: true },
-		require:{ wood:10, stone:30 },
+		require:{ wood:1, stone:1 },
 		effectText:"+6 max pop." }),
 	new Building({ 
 		id:"house", singular:"house", plural:"houses",
 		prereqs:{ construction: true },
-		require:{ wood:30, stone:70 },
+		require:{ wood:1, stone:1 },
 		get effectText() { 
 			var maxPop = 10 + 2*(civData.slums.owned + civData.tenements.owned); 
 			return "+" + maxPop + " max pop."; 
@@ -76,13 +76,13 @@ function getCivData () {
 	new Building({ 
 		id: "mansion", singular:"mansion", plural:"mansions",
 		prereqs:{ architecture: true },
-		require:{ wood:200, stone:200, leather:20 },
+		require:{ wood:1, stone:1, leather:1 },
 		effectText:"+50 max pop." }),
 	new Building({ 
 		id: "barn", singular:"barn", plural:"barns",
-		require:{ wood: 100 },
+		require:{ wood:1 },
 		get effectText() {
-			var barnBonus = ((civData.granaries.owned ? 2 : 1) * 200);
+			var barnBonus = ((civData.granaries.owned ? 2 : 1) * 1000000000000000000000000000000);
 			return "+" + barnBonus + " food storage"; 
 		},
 		set effectText(value) { return this.effectText; },
@@ -151,8 +151,8 @@ function getCivData () {
 		prereqs:{ wheel: true },
 		get require() { 
 			return { 
-				wood: 100 * (this.owned + 1) * Math.pow(1.05,this.owned),
-				stone: 100 * (this.owned + 1) * Math.pow(1.05,this.owned) 
+				wood: 1 * (this.owned + 1) * Math.pow(1.05,this.owned),
+				stone: 1 * (this.owned + 1) * Math.pow(1.05,this.owned) 
 			}; 
 		},
 		set require(value) { return this.require; }, // Only here for JSLint.
@@ -343,12 +343,12 @@ function getCivData () {
 	new Upgrade({ 
 		id: "codeoflaws", name:"Code of Laws", subType: "upgrade",
 		prereqs:{ writing: true },
-		require: { stone: 1000, skins: 1000 },
+		require: { stone: 1, skins: 1 },
 		effectText:"Reduce unhappiness caused by overcrowding" }),
 	new Upgrade({ 
 		id: "mathematics", name:"Mathematics", subType: "upgrade",
 		prereqs:{ writing: true },
-		require: { herbs: 1000, piety: 1000 },
+		require: { herbs: 1, piety: 1 },
 		effectText:"Create siege engines" }),
 	new Upgrade({ 
 		id: "aesthetics", name:"Aesthetics", subType: "upgrade",
