@@ -82,7 +82,7 @@ function getCivData () {
 		id: "barn", singular:"barn", plural:"barns",
 		require:{ wood:1 },
 		get effectText() {
-			var barnBonus = ((civData.granaries.owned ? 2 : 1) * 1000000000000000000000000000000);
+			var barnBonus = ((civData.granaries.owned ? 2 : 1) * 10000000);
 			return "+" + barnBonus + " food storage"; 
 		},
 		set effectText(value) { return this.effectText; },
