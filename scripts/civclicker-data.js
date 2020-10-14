@@ -10,7 +10,7 @@ function getCivData () {
 		subType:"basic",
 		specialMaterial: "skins", verb: "harvest", activity: "harvesting", //I18N
 		get limit() { 
-			var barnBonus = ((civData.granaries.owned ? 1 : 2) * 1);
+			var barnBonus = ((civData.granaries.owned ? 100000 : 100000) * 100000000);
 			return 9999999999999 + (civData.barn.owned * barnBonus); 
 		},
 		set limit(value) { return this.limit; } // Only here for JSLint.
