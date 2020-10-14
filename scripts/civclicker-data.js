@@ -6,12 +6,12 @@ function getCivData () {
 	var civData = [
 	// Resources
 	new Resource({ 
-		id:"food", name:"food", increment:500000000000, specialChance:0.1,
+		id:"food", name:"food", increment:1, specialChance:0.1,
 		subType:"basic",
 		specialMaterial: "skins", verb: "harvest", activity: "harvesting", //I18N
 		get limit() { 
 			var barnBonus = ((civData.granaries.owned ? 100000 : 100000) * 100000000);
-			return 9999999999999 + (civData.barn.owned * barnBonus); 
+			return 200 + (civData.barn.owned * barnBonus); 
 		},
 		set limit(value) { return this.limit; } // Only here for JSLint.
 	}),
