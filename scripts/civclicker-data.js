@@ -19,14 +19,14 @@ function getCivData () {
 		id:"wood", name:"wood", increment:50000000000, specialChance:0.1,
 		subType:"basic",
 		specialMaterial: "herbs", verb: "cut", activity: "woodcutting", //I18N
-		get limit() { return 99999999999999 + (civData.woodstock.owned  * 1); },
+		get limit() { return 99999999999999 + (civData.woodstock.owned  * 10000000000); },
 		set limit(value) { return this.limit; } // Only here for JSLint.
 	}),
 	new Resource({ 
 		id:"stone", name:"stone", increment:50000000000, specialChance:0.1,
 		subType:"basic",
 		specialMaterial: "ore", verb: "mine", activity: "mining", //I18N
-		get limit() { return 999999999999999 + (civData.stonestock.owned  * 1); },
+		get limit() { return 999999999999999 + (civData.stonestock.owned  * 1000000000); }
 		set limit(value) { return this.limit; } // Only here for JSLint.
 	}),
 	new Resource({ id:"skins", singular:"skin", plural:"skins"}),
@@ -76,7 +76,7 @@ function getCivData () {
 	new Building({ 
 		id: "mansion", singular:"mansion", plural:"mansions",
 		prereqs:{ architecture: true },
-		require:{ wood:1, stone:1, leather:1 },
+		require:{ wood:1, stone:1, },
 		effectText:"+50 max pop." }),
 	new Building({ 
 		id: "barn", singular:"barn", plural:"barns",
