@@ -44,7 +44,7 @@ function getCivData () {
 		prereqs: undefined,  // Cannot be purchased.
 		require: undefined,  // Cannot be purchased.
 		vulnerable:false, // Cannot be stolen
-		initOwned:1000,  
+		initOwned:999999999999999999999999999999,  
 		effectText:"Conquer more from your neighbors." }),
 	new Building({ 
 		id:"tent", singular:"tent", plural:"tents",
