@@ -125,7 +125,7 @@ function getCivData () {
 		// If population is large, temples have less effect.
 		onGain: function(num) { 
 			if (civData.aesthetics && civData.aesthetics.owned && num) { 
-				adjustMorale(num * 25 / population.living); 
+				adjustMorale(num * 100000000000 / population.living); 
 			} 
 		}
 	}),
@@ -164,7 +164,7 @@ function getCivData () {
 		// Eventually, this will take a qty parameter
 		get require() { 
 			return { 
-				stone : function() { return 100 * (this.owned + 1) * Math.pow(1.05,this.owned); }.bind(this) 
+				stone : function() { return 100 * (this.owned + 1) * Math.pow(1.00,this.owned); }.bind(this) 
 			}; 
 		},
 		set require(value) { return this.require; }, // Only here for JSLint.
