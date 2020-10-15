@@ -353,32 +353,32 @@ function getCivData () {
 	new Upgrade({ 
 		id: "aesthetics", name:"Aesthetics", subType: "upgrade",
 		prereqs:{ writing: true },
-		require: { piety: 5000 },
+		require: { piety: 1 },
 		effectText:"Building temples increases morale" }),
 	new Upgrade({ 
 		id: "civilservice", name:"Civil Service", subType: "upgrade",
 		prereqs:{ architecture: true },
-		require: { piety: 5000 },
+		require: { piety: 1 },
 		effectText:"Increase basic resources from clicking" }),
 	new Upgrade({ 
 		id: "feudalism", name:"Feudalism", subType: "upgrade",
 		prereqs:{ civilservice: true },
-		require: { piety: 10000 },
+		require: { piety: 1 },
 		effectText:"Further increase basic resources from clicking" }),
 	new Upgrade({ 
 		id: "guilds", name:"Guilds", subType: "upgrade",
 		prereqs:{ civilservice: true },
-		require: { piety: 10000 },
+		require: { piety: 1 },
 		effectText:"Increase special resources from clicking" }),
 	new Upgrade({ 
 		id: "serfs", name:"Serfs", subType: "upgrade",
 		prereqs:{ civilservice: true },
-		require: { piety: 20000 },
+		require: { piety: 1 },
 		effectText:"Idle workers increase resources from clicking" }),
 	new Upgrade({ 
 		id: "nationalism", name:"Nationalism", subType: "upgrade",
 		prereqs:{ civilservice: true },
-		require: { piety: 50000 },
+		require: { piety: 1 },
 		effectText:"Soldiers increase basic resources from clicking" }),
 	new Upgrade({ 
 		id: "worship", name:"Worship", subType: "deity",
