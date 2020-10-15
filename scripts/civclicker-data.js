@@ -780,7 +780,7 @@ function getCivData () {
 	}),
 		//trading
 	new Achievement({id:"merchantAch", name:"Merch&shy;ant"  , 
-		test:function() { return civData.gold.owned > 0; }
+		test:function() { return civData.gold.owned > 10000000000; }
 	}),
 	new Achievement({id:"rushedAch", name:"Rushed", 
 		test:function() { return curCiv.curWonder.rushed; }
